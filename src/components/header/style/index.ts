@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { color } from '../../../style';
+import { Link } from 'react-router-dom';
 
 export const Header = styled.div`
   width: 100%;
@@ -34,10 +35,14 @@ export const LogoImg = styled.img`
   height: 23px;
 `;
 
-export const Login = styled.p`
+export const Login = styled(Link)`
   width: 52px;
   font-size: 18px;
   margin-right: 10px;
+  color: black;
+  :hover {
+    color: ${color.main};
+  }
 `;
 
 export const Signup = styled(Login)`
