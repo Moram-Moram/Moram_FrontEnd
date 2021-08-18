@@ -16,6 +16,10 @@ export const HeaderContent = styled.div`
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
+  > a > div {
+    display: flex;
+    align-items: center;
+  }
   > div {
     display: flex;
     align-items: center;
