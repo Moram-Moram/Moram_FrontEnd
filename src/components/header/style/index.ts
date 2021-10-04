@@ -27,7 +27,7 @@ export const HeaderContent = styled.div`
 `;
 
 export const LogoText = styled.p`
-  width: 115px;
+  width: 120px;
   font-size: 29px;
   font-weight: bold;
   color: ${color.main};
@@ -40,7 +40,7 @@ export const LogoImg = styled.img`
 `;
 
 export const Login = styled(Link)`
-  width: 52px;
+  width: 55px;
   font-size: 18px;
   margin-right: 10px;
   color: black;
@@ -50,7 +50,7 @@ export const Login = styled(Link)`
 `;
 
 export const Signup = styled(Login)`
-  width: 68px;
+  width: 73px;
   font-weight: bold;
   margin-left: 10px;
   margin-right: 7%;
