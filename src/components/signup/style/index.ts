@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { color } from '../../../style';
 
 export const Signup = styled.div`
@@ -20,7 +20,7 @@ export const SignupBox = styled.div`
 `;
 
 export const SignUpTitle = styled.p`
-  width: 105px;
+  width: 111px;
   font-size: 30px;
   color: ${color.main};
   font-weight: bold;
@@ -38,23 +38,30 @@ export const InputTitle = styled.div`
   }
 `;
 
-export const DuplicateCheckBtn = styled.div`
+export const DuplicateCheckBtn = styled.div<{ isSuccessCheck: boolean | undefined }>`
   width: 54px;
   height: 23px;
   text-align: center;
-  color: ${color.explain};
   background-color: ${color.btnBackground};
-  padding: 6px 0px;
   border-radius: 10px;
   font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   :hover {
     font-weight: bold;
     color: ${color.light};
     border: 1px solid ${color.light};
     background-color: #ffffff;
-    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  ${({ isSuccessCheck }) => css`
+    color: ${isSuccessCheck ? 'white' : color.explain};
+    background-color: ${isSuccessCheck ? color.main : color.btnBackground};
+  `}
 `;
 
 export const Input = styled.input`
@@ -81,7 +88,9 @@ export const StartCheckBox = styled.div`
   margin-right: 10px;
   cursor: pointer;
   box-sizing: border-box;
-  padding-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SmallCheckBox = styled.div`
@@ -98,18 +107,22 @@ export const StartExplain = styled.p`
   text-align: center;
 `;
 
-export const StartBtn = styled.div`
+export const StartBtn = styled.div<{ canClick: boolean }>`
   width: 275px;
   height: 45px;
-  background-color: #e8e8e8;
   border-radius: 10px;
   text-align: center;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 15px 0px;
   font-size: 15px;
-  color: ${color.explain};
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${({ canClick }) => css`
+    color: ${canClick ? 'white' : color.explain};
+    background-color: ${canClick ? color.main : '#e8e8e8'};
+    cursor: ${canClick ? 'pointer' : 'default'};
+  `}
 `;
 
 export const IsLogin = styled.p`
