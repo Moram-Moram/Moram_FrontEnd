@@ -7,7 +7,7 @@ interface SignupState {
   whiteCheck: boolean;
   isSuccessSaveSignup: boolean | undefined;
   isSuccessCheckId: boolean | undefined;
-  isSuccessCheckPassword: boolean | undefined;
+  isSuccessCheckNickName: boolean | undefined;
   error: error | null;
 }
 

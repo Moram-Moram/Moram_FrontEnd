@@ -11,9 +11,9 @@ import {
   ID_DUPLICATECHECK,
   ID_DUPLICATECHECK_SUCCESS,
   ID_DUPLICATECHECK_FAILURE,
-  PW_DUPLICATECHECK,
-  PW_DUPLICATECHECK_SUCCESS,
-  PW_DUPLICATECHECK_FAILURE,
+  NICKNAME_DUPLICATECHECK,
+  NICKNAME_DUPLICATECHECK_SUCCESS,
+  NICKNAME_DUPLICATECHECK_FAILURE,
 } from '../../action/signup/interface';
 
 export const initState: SignupState = {
@@ -23,7 +23,7 @@ export const initState: SignupState = {
   whiteCheck: false,
   isSuccessSaveSignup: undefined,
   isSuccessCheckId: undefined,
-  isSuccessCheckPassword: undefined,
+  isSuccessCheckNickName: undefined,
   error: null,
 };
 
@@ -77,23 +77,25 @@ const SignupReducer = (state: SignupState = initState, action: signupActionType)
     case ID_DUPLICATECHECK_FAILURE:
       return {
         ...state,
-        isSuccessCheckPassword: false,
+        isSuccessCheckId: false,
       };
-    case PW_DUPLICATECHECK:
+    case NICKNAME_DUPLICATECHECK:
       return {
         ...state,
-        isSuccessCheckPassword: undefined,
+        isSuccessCheckNickName: undefined,
       };
-    case PW_DUPLICATECHECK_SUCCESS:
+    case NICKNAME_DUPLICATECHECK_SUCCESS:
       return {
         ...state,
-        isSuccessCheckPassword: true,
+        isSuccessCheckNickName: true,
       };
-    case PW_DUPLICATECHECK_FAILURE:
+    case NICKNAME_DUPLICATECHECK_FAILURE:
       return {
         ...state,
-        isSuccessCheckPassword: false,
+        isSuccessCheckNickName: false,
       };
+    default:
+      return state;
   }
 };
 
