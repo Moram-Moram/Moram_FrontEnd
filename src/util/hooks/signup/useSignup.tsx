@@ -11,16 +11,16 @@ const useSignup = () => {
   const dispatch = useDispatch();
   const state = useSelectState().signup;
   const setState = {
-    setId: (payload: string) => {
+    setUserId: (payload: string) => {
       dispatch(setId(payload));
     },
-    setNickname: (payload: string) => {
+    setUserNickname: (payload: string) => {
       dispatch(setNickname(payload));
     },
-    setPassword: (payload: string) => {
+    setUserPassword: (payload: string) => {
       dispatch(setPassword(payload));
     },
-    setWhiteCheck: (payload: boolean) => {
+    setUserWhiteCheck: (payload: boolean) => {
       dispatch(setWhiteCheck(payload));
     },
   };
