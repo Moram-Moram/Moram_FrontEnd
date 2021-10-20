@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { color } from '../../../style';
 
 export const Login = styled.div`
@@ -47,10 +47,9 @@ export const Input = styled.input`
   padding: 0px 10px;
 `;
 
-export const StartBtn = styled.div`
+export const StartBtn = styled.div<{ isStart: boolean }>`
   width: 275px;
   height: 45px;
-  background-color: #e8e8e8;
   border-radius: 10px;
   text-align: center;
   margin: 20px auto 25px auto;
@@ -58,9 +57,13 @@ export const StartBtn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  > p {
-    color: ${color.explain};
-  }
+  cursor: pointer;
+  ${({ isStart }) => css`
+    background-color: ${isStart ? color.main : '#e8e8e8'};
+    > p {
+      color: ${isStart ? '#ffffff' : color.explain};
+    }
+  `}
 `;
 
 export const IsSignup = styled.p`
