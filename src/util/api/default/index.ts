@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getRequest = () => {
   const request = axios.create({
     timeout: 10000,
-    baseURL: 'https://13.58.212.162',
+    baseURL: 'https://52.95.252.152:8090',
     withCredentials: true,
     headers: {
       withCredentials: true,
@@ -18,7 +18,7 @@ export const getRequestWithAccessToken = (
 ) => {
   const request = axios.create({
     timeout: 10000,
-    baseURL: 'https://13.58.212.162',
+    baseURL: 'https://52.95.252.152:8090',
     headers: {
       Authorization: `Bearer ${token}`,
       withCredentials: true,
