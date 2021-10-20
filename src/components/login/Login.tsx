@@ -13,9 +13,11 @@ const Login = () => {
           <S.InputTitle>{ID}</S.InputTitle>
           <S.Input />
           <S.InputTitle>{PASSWORD}</S.InputTitle>
-          <S.Input />
+          <S.Input type='password' />
         </S.InputLine>
-        <S.StartBtn>{START}</S.StartBtn>
+        <S.StartBtn>
+          <p>{START}</p>
+        </S.StartBtn>
         <S.IsSignup>{ISFIRST}</S.IsSignup>
         <S.Signup to='/signup'>{SIGNUP}</S.Signup>
       </S.LoginBox>

@@ -44,6 +44,7 @@ export const Input = styled.input`
   border: 1px solid ${color.inputBorder};
   border-radius: 10px;
   margin-bottom: 15px;
+  padding: 0px 10px;
 `;
 
 export const StartBtn = styled.div`
@@ -51,11 +52,15 @@ export const StartBtn = styled.div`
   height: 45px;
   background-color: #e8e8e8;
   border-radius: 10px;
-  color: ${color.explain};
   text-align: center;
   margin: 20px auto 25px auto;
   box-sizing: border-box;
-  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > p {
+    color: ${color.explain};
+  }
 `;
 
 export const IsSignup = styled.p`
